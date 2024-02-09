@@ -24,12 +24,22 @@ $(call inherit-product, device/oneplus/fajita/device.mk)
 # Inherit some common RisingTechOSS stuff.
 $(call inherit-product, vendor/rising/config/rising.mk)
 
+
 # RisingTechOSS stuff
 TARGET_BOOT_ANIMATION_RES := 1080
 TARGET_SUPPORTS_QUICK_TAP := true
 TARGET_ENABLE_BLUR := false
-TARGET_USES_AOSP_RECOVERY := true
 RISING_MAINTAINER := Vikas•Yaduvanshi
+
+# Addons
+TARGET_HAS_UDFPS := true
+
+# Gms variables
+WITH_GMS := true
+
+# Use Google telephony framework
+TARGET_USE_GOOGLE_TELEPHONY := true
+
 
 PRODUCT_NAME := rising_fajita
 PRODUCT_DEVICE := fajita
